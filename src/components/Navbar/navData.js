@@ -4,12 +4,17 @@ export const navLinks = [
     pathname: '/#project-1',
   },
   {
+    label: 'Skills',
+    pathname: '/#tech-stack',
+  },
+  {
     label: 'Details',
     pathname: '/#details',
   },
   {
     label: 'Articles',
     pathname: '/articles',
+    disabled: true
   },
   {
     label: 'Contact',

@@ -1,15 +1,30 @@
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import marketMakersTexture2Large from 'assets/gamestack-list-large.jpg';
+import marketMakersTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
+import marketMakersTexture2 from 'assets/market-makers/dashboard-mob.png';
+import marketMakersTextureLarge from 'assets/gamestack-login-large.jpg';
+import marketMakersTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
+import marketMakersTexture from 'assets/market-makers/dashboard-mob-2.png';
+import dogwoodTextureLarge from 'assets/slice-app-large.jpg';
+import dogwoodTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
+import dogwoodTexture from 'assets/dogwood/home.png';
+import deeplawnTextureLarge from 'assets/deeplawn/dashboard.png';
+import deeplawnTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
+import deeplawnTexture from 'assets/deeplawn/home.png';
+import kghypeTexture2Large from 'assets/kghype/home-mob.png';
+import kghypeTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
+import kghypeTexture2 from 'assets/kghype/home-mob.png';
+import kghypeTextureLarge from 'assets/kghype/home-mob-2.png';
+import kghypeTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
+import kghypeTexture from 'assets/kghype/home-mob-2.png';
+import servicecartTextureLarge from 'assets/servicecart/home.png';
+import servicecartTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
+import servicecartTexture from 'assets/servicecart/home.png';
+import rtmTexture2Large from 'assets/gamestack-list-large.jpg';
+import rtmTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
+import rtmTexture2 from 'assets/rtm/home-mob.png';
+import rtmTextureLarge from 'assets/gamestack-login-large.jpg';
+import rtmTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
+import rtmTexture from 'assets/rtm/home-mob-2.png';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -17,8 +32,11 @@ import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
+import ProjectCarousel from 'components/ProjectCarousel/ProjectCarousel';
+import { Heading } from 'components/Heading';
+import TechStack from 'pages/techstack/TechStack';
 
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+const disciplines = ['Software Engineer', 'Algorithm Designer', 'DevOps Enthusiast', 'Tech Writer', 'Traveller'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -27,10 +45,15 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
+  const projectFive = useRef();
+  const projectSix = useRef();
+  const otherProjects = useRef();
+  const techStack = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, otherProjects, techStack, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -83,17 +106,17 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Deep Lawn - AI Based Lawn Measurement"
+        description="The Ultimate sales tool for Lawn Care & Pest Control Companies"
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Deep Lawn - AI Based Lawn Measurement',
           textures: [
             {
-              srcSet: [sprTexture, sprTextureLarge],
-              placeholder: sprTexturePlaceholder,
+              srcSet: [deeplawnTexture, deeplawnTextureLarge],
+              placeholder: deeplawnTexturePlaceholder,
             },
           ],
         }}
@@ -104,8 +127,8 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Market Makers - Market Analytics & AI Research Tool"
+        description="AI-driven world-class research tools, real time financial information, algorithmic investment insights & analytics to stay ahead in the global trading game"
         buttonText="View website"
         buttonLink="https://gamestack.hamishw.com"
         model={{
@@ -113,23 +136,24 @@ export const Home = () => {
           alt: 'App login screen',
           textures: [
             {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: [marketMakersTexture, marketMakersTextureLarge],
+              placeholder: marketMakersTexturePlaceholder,
             },
             {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: [marketMakersTexture2, marketMakersTexture2Large],
+              placeholder: marketMakersTexture2Placeholder,
             },
           ],
         }}
       />
+
       <ProjectSummary
         id="project-3"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Dogwood Analytics - Hybrid business intelligence tool"
+        description="A tailored hybrid software program that performs as a business intelligence tool combining all aspects of your business on a straightforward yet effective system"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
@@ -137,12 +161,106 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
+              srcSet: [dogwoodTexture, dogwoodTextureLarge],
+              placeholder: dogwoodTexturePlaceholder,
             },
           ],
         }}
       />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="KGHYPE - Taobao Agent"
+        description="Affordables and Efficient Shipping and Logisitics."
+        buttonText="View website"
+        buttonLink="https://gamestack.hamishw.com"
+        model={{
+          type: 'phone',
+          alt: 'App login screen',
+          textures: [
+            {
+              srcSet: [kghypeTexture, kghypeTextureLarge],
+              placeholder: kghypeTexturePlaceholder,
+            },
+            {
+              srcSet: [kghypeTexture2, kghypeTexture2Large],
+              placeholder: kghypeTexture2Placeholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-5"
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
+        title="Service Cart - Sales tool for Cleaning Companies"
+        description="Service Cart enables Cleaning companies to sell their services online in seconds by combining machine learning, geospatial data, and payment processing into an all-in-one e-commerce tool."
+        buttonText="View project"
+        buttonLink="/projects/slice"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [servicecartTexture, servicecartTextureLarge],
+              placeholder: servicecartTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-6"
+        alternate
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
+        title="Ready To Munch - Online Food Ordering App"
+        description="Ready to Munch offers a long and detailed list of the best restaurants nearby with menu items at the same restaurants' price, with no extra fee available to order food Online with home delivery and takeaway options."
+        buttonText="View website"
+        buttonLink="https://gamestack.hamishw.com"
+        model={{
+          type: 'phone',
+          alt: 'App login screen',
+          textures: [
+            {
+              srcSet: [rtmTexture, rtmTextureLarge],
+              placeholder: rtmTexturePlaceholder,
+            },
+            {
+              srcSet: [rtmTexture2, rtmTexture2Large],
+              placeholder: rtmTexture2Placeholder,
+            },
+          ],
+        }}
+      />
+      <Heading
+        level={3}
+        as="h2"
+        className={styles.heading}
+        data-visible={visibleSections.includes(otherProjects.current)}
+        id={null}
+      >
+        Other Projects
+      </Heading>
+      <ProjectCarousel
+        sectionRef={otherProjects}
+        visible={visibleSections.includes(otherProjects.current)}
+        id="other-projects" />
+      <Heading
+        level={3}
+        as="h2"
+        className={styles.heading}
+        data-visible={visibleSections.includes(otherProjects.current)}
+        id={null}
+      >
+        My Tech Stack
+      </Heading>
+      <TechStack id="tech-stack" sectionRef={techStack}
+        visible={visibleSections.includes(techStack.current)} />
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}

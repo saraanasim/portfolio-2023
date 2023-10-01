@@ -18,19 +18,20 @@ import styles from './Profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="Hey there!" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      I'm Saraan, a web wizard on a mission to make your digital dreams come true, currently working
+      as a Full Stack MERN Developer at <Link href="https://samsoft.dev/">Samsoft Technologies </Link>
+      As you stroll through these virtual vibes, you'll catch a glimpse of my skills in MERN stack magic,
+      AWS CodePipelines mastery, and the art of Dockerization.
+    </Text>
+    <Text className={styles.heading} data-visible={visible} size="2" as="h2">
+      🤝 For Software Houses, Clients, Recruiters, and Dev Buddies
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      Whether you're a software house on the hunt for a tech sidekick, a client chasing digital stardom,
+      a recruiter scouting the A-team, or a fellow dev looking for inspiration — you're in good hands.
     </Text>
   </Fragment>
 );

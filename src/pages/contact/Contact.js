@@ -33,27 +33,29 @@ export const Contact = () => {
     try {
       setSending(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.value,
-          message: message.value,
-        }),
-      });
+      setTimeout(() => { }, 3000)
 
-      const responseMessage = await response.json();
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
+      //   method: 'POST',
+      //   mode: 'cors',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     email: email.value,
+      //     message: message.value,
+      //   }),
+      // });
 
-      const statusError = getStatusError({
-        status: response?.status,
-        errorMessage: responseMessage?.error,
-        fallback: 'There was a problem sending your message',
-      });
+      // const responseMessage = await response.json();
 
-      if (statusError) throw new Error(statusError);
+      // const statusError = getStatusError({
+      //   status: response?.status,
+      //   errorMessage: responseMessage?.error,
+      //   fallback: 'There was a problem sending your message',
+      // });
+
+      // if (statusError) throw new Error(statusError);
 
       setComplete(true);
       setSending(false);

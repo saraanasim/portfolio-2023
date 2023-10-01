@@ -18,7 +18,8 @@
     --headerNavFontSize: calc((22 / 16) * 1rem);
   }
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile),
+  (--mediaMobileLS) {
     bottom: auto;
   }
 }
@@ -42,7 +43,8 @@
   flex: 1 1 auto;
   max-width: var(--space2XL);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile),
+  (--mediaMobileLS) {
     display: none;
   }
 }
@@ -100,6 +102,52 @@
   }
 }
 
+.disabledNavLink {
+  padding: var(--spaceM);
+  color: rgb(var(--rgbText) / 0.8);
+  font-weight: var(--fontWeightMedium);
+  font-size: var(--headerNavFontSize);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--durationS) ease 0.1s;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &[aria-current='page'] {
+    color: var(--colorTextBody);
+    cursor: not-allowed;
+  }
+
+  /* &::after {
+    content: '';
+    position: absolute;
+    right: var(--spaceS);
+    left: var(--spaceS);
+    height: 4px;
+    background: rgb(var(--rgbAccent));
+    transform: scaleX(0);
+    transform-origin: right;
+  } */
+
+  @media (--mediaUseMotion) {
+    &::after {
+      transition: transform var(--durationM) var(--bezierFastoutSlowin);
+    }
+  }
+
+  &:hover::after,
+  &:active::after,
+  &:focus::after,
+  &[aria-current='page']::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
 .navIcons {
   display: flex;
   flex-direction: column;
@@ -108,7 +156,8 @@
   position: relative;
   z-index: var(--zIndex2);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile),
+  (--mediaMobileLS) {
     flex-direction: row;
     position: absolute;
     bottom: var(--spaceXL);
@@ -160,7 +209,8 @@
   justify-content: center;
   backdrop-filter: blur(16px);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile),
+  (--mediaMobileLS) {
     display: flex;
   }
 
@@ -198,7 +248,8 @@
     top: auto;
   }
 
-  @media (--mediaMobileS), (max-height: 360px) {
+  @media (--mediaMobileS),
+  (max-height: 360px) {
     --headerNavFontSize: calc((18 / 16) * 1rem);
   }
 

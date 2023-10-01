@@ -154,11 +154,11 @@ export const Navbar = () => {
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
-          {navLinks.map(({ label, pathname }) => (
-            <RouterLink href={pathname} scroll={false} key={label}>
+          {navLinks.map(({ label, pathname, disabled }) => (
+            <RouterLink href={!disabled ? pathname : '/'} scroll={false} key={label}>
               <a
                 data-navbar-item
-                className={styles.navLink}
+                className={!disabled ? styles.navLink : styles.disabledNavLink}
                 aria-current={getCurrent(pathname)}
                 onClick={handleNavItemClick}
               >
