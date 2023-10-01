@@ -1,13 +1,10 @@
-import React from 'react'
-import styles from './Card.module.css';
-import { Heading } from 'components/Heading';
-import { Text } from 'components/Text';
-import { Button } from 'components/Button';
-import { Image } from 'components/Image';
-import sliceSlidesLarge from 'assets/slice-slides-large.jpg';
 import sliceSlidesPlaceholder from 'assets/slice-slides-placeholder.jpg';
-import sliceSlides from 'assets/slice-slides.jpg';
+import { Button } from 'components/Button';
+import { Heading } from 'components/Heading';
+import { Image } from 'components/Image';
+import { Text } from 'components/Text';
 import { media } from 'utils/style';
+import styles from './Card.module.css';
 const Card = ({ name, description, image, buttonText = "Visit", link, visible }) => {
   return (
     <div className={styles.mainDiv}>
@@ -39,7 +36,7 @@ const Card = ({ name, description, image, buttonText = "Visit", link, visible })
       />
 
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

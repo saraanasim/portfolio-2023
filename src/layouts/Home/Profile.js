@@ -1,7 +1,5 @@
-import profileKatakana from 'assets/katakana-profile.svg?url';
-import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
-import profileImg from 'assets/profile.jpg';
+import { default as profileImg, default as profileImgLarge } from 'assets/profile.jpg';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
@@ -21,17 +19,17 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hey there!" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I'm Saraan, a web wizard on a mission to make your digital dreams come true, currently working
+      I am m Saraan, a web wizard on a mission to make your digital dreams come true, currently working
       as a Full Stack MERN Developer at <Link href="https://samsoft.dev/">Samsoft Technologies </Link>
-      As you stroll through these virtual vibes, you'll catch a glimpse of my skills in MERN stack magic,
+      As you stroll through these virtual vibes, you will catch a glimpse of my skills in MERN stack magic,
       AWS CodePipelines mastery, and the art of Dockerization.
     </Text>
     <Text className={styles.heading} data-visible={visible} size="2" as="h2">
       🤝 For Software Houses, Clients, Recruiters, and Dev Buddies
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Whether you're a software house on the hunt for a tech sidekick, a client chasing digital stardom,
-      a recruiter scouting the A-team, or a fellow dev looking for inspiration — you're in good hands.
+      Whether you are a software house on the hunt for a tech sidekick, a client chasing digital stardom,
+      a recruiter scouting the A-team, or a fellow dev looking for inspiration — you are in good hands.
     </Text>
   </Fragment>
 );
@@ -87,16 +85,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
                 />
-                <svg
-                  aria-hidden="true"
-                  width="135"
-                  height="765"
-                  viewBox="0 0 135 765"
-                  className={styles.svg}
-                  data-visible={visible}
-                >
-                  <use href={`${profileKatakana}#katakana-profile`} />
-                </svg>
+
               </div>
             </div>
           </div>
