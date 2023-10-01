@@ -1,5 +1,5 @@
 import { TechCard } from 'components/TechCard/TechCard';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import reactLogo from 'assets/react.png';
 import nodeLogo from 'assets/node.png';
 import mongoLogo from 'assets/mongo.png';
@@ -13,7 +13,7 @@ import nextLogo from 'assets/next.png';
 import gatsbyLogo from 'assets/gatsby.png';
 
 import { Section } from 'components/Section';
-import styles from './TechStack.module.css'
+import styles from './TechStack.module.css';
 import { Transition } from 'components/Transition';
 
 const TechStack = ({ sectionRef, visible, id }) => {
@@ -70,7 +70,7 @@ const TechStack = ({ sectionRef, visible, id }) => {
         },
 
 
-    ]
+    ];
     return (
         <Section
             className={styles.techStack}
@@ -86,13 +86,13 @@ const TechStack = ({ sectionRef, visible, id }) => {
                 {visible => (
                     <div className={styles.mainDiv}>
                         {skills.map((each) => {
-                            return <TechCard image={each.image} text={each.text} />
+                            return <TechCard key={each.text} image={each.image} text={each.text} />;
                         })}
                     </div>
                 )}
             </Transition>
         </Section>
-    )
-}
+    );
+};
 
-export default TechStack
+export default TechStack;

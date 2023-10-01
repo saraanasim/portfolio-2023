@@ -33,7 +33,7 @@ export const Contact = () => {
     try {
       setSending(true);
 
-      setTimeout(() => { }, 3000)
+      setTimeout(() => { }, 3000);
 
       // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
       //   method: 'POST',
