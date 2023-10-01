@@ -5,6 +5,7 @@
   "description": "Portfolio site for Saraan Asim",
   "repository": "https://github.com/saraanasim/portfolio-2023.git",
   "author": "Saraan Asim",
+  "export": "next export",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
