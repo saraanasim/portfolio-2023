@@ -1,38 +1,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//articles/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/articles/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//contact/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/contact/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//uses/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/uses/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//projects/slice/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/projects/slice/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//projects/volkihar-knight/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/projects/smart-sparrow/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//projects/smart-sparrow/</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/projects/volkihar-knight/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//articles/hello-world</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/articles/hello-world</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://saraanasim.github.io/portfolio-2023//articles/modern-styling-in-react</loc>
+    <loc>https://saraanasim.github.io/portfolio-2023/articles/modern-styling-in-react</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
