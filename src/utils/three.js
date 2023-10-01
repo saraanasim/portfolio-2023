@@ -6,7 +6,7 @@ Cache.enabled = true;
 
 const dracoLoader = new DRACOLoader();
 const gltfLoader = new GLTFLoader();
-dracoLoader.setDecoderPath('/draco/');
+dracoLoader.setDecoderPath('https://saraanasim.github.io/portfolio-2023/draco/');
 gltfLoader.setDRACOLoader(dracoLoader);
 
 /**
