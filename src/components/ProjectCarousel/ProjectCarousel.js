@@ -32,7 +32,7 @@ const ProjectCarousel = ({ sectionRef, visible, id }) => {
                 {visible => (
                     <div className={styles.mainDiv}>
                         {otherProjects.map((each) => {
-                            return <Card key={name} name={each.name} description={each.description} image={each.image} link={each.link} visible={visible} />;
+                            return <Card key={each.name} name={each.name} description={each.description} image={each.image} link={each.link} visible={visible} />;
                         })}
                     </div>
                 )}

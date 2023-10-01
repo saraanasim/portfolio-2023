@@ -34,7 +34,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 import ProjectCarousel from 'components/ProjectCarousel/ProjectCarousel';
 import { Heading } from 'components/Heading';
-import TechStack from 'pages/techstack/TechStack';
+import TechStack from 'components/techstack/TechStack';
 
 const disciplines = ['Software Engineer', 'Algorithm Designer', 'DevOps Enthusiast', 'Tech Writer', 'Traveller'];
 
