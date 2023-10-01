@@ -1,5 +1,7 @@
 module.exports = {
   reactStrictMode: true,
+  // Add basePath
+  basePath: '/github-pages',
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
   webpack(config, { isServer }) {
