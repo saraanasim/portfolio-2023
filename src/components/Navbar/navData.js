@@ -25,17 +25,17 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
+    url: 'https://twitter.com/asimsaraan',
     icon: 'twitter',
   },
   {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
+    label: 'LinkedIn',
+    url: 'https://pk.linkedin.com/in/saraan-asim',
+    icon: 'linkedin',
   },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/saraanasim',
     icon: 'github',
   },
 ];
