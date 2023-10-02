@@ -108,8 +108,8 @@ export const Home = () => {
         index={1}
         title="Deep Lawn - AI Based Lawn Measurement"
         description="The Ultimate sales tool for Lawn Care & Pest Control Companies"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonText="View website"
+        buttonLink="https://deeplawn.com/"
         model={{
           type: 'laptop',
           alt: 'Deep Lawn - AI Based Lawn Measurement',
@@ -130,7 +130,7 @@ export const Home = () => {
         title="Market Makers - Market Analytics & AI Research Tool"
         description="AI-driven world-class research tools, real time financial information, algorithmic investment insights & analytics to stay ahead in the global trading game"
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://marketmakers.com/"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -154,8 +154,8 @@ export const Home = () => {
         index={3}
         title="Dogwood Analytics - Hybrid business intelligence tool"
         description="A tailored hybrid software program that performs as a business intelligence tool combining all aspects of your business on a straightforward yet effective system"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonText="View website"
+        buttonLink="https://www.dogwoodsuite.com/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -176,7 +176,7 @@ export const Home = () => {
         title="KGHYPE - Taobao Agent"
         description="Affordables and Efficient Shipping and Logisitics."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://www.kghype.com/"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -199,8 +199,8 @@ export const Home = () => {
         index={5}
         title="Service Cart - Sales tool for Cleaning Companies"
         description="Service Cart enables Cleaning companies to sell their services online in seconds by combining machine learning, geospatial data, and payment processing into an all-in-one e-commerce tool."
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonText="View website"
+        buttonLink="https://servicecart.io/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -221,7 +221,7 @@ export const Home = () => {
         title="Ready To Munch - Online Food Ordering App"
         description="Ready to Munch offers a long and detailed list of the best restaurants nearby with menu items at the same restaurants' price, with no extra fee available to order food Online with home delivery and takeaway options."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://readytomunch.com/"
         model={{
           type: 'phone',
           alt: 'App login screen',
