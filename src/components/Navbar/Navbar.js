@@ -172,10 +172,10 @@ export const Navbar = () => {
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {visible => (
           <nav className={styles.mobileNav} data-visible={visible}>
-            {navLinks.map(({ label, pathname }, index) => (
-              <RouterLink href={pathname} scroll={false} key={label}>
+            {navLinks.map(({ label, pathname, disabled }, index) => (
+              <RouterLink href={!disabled ? pathname : '/'} scroll={false} key={label}>
                 <a
-                  className={styles.mobileNavLink}
+                  className={!disabled ? styles.mobileNavLink : styles.disabledMobileNavLink}
                   data-visible={visible}
                   aria-current={getCurrent(pathname)}
                   onClick={handleMobileNavClick}
