@@ -30,7 +30,7 @@ const Card = ({ name, description, image, buttonText = "Visit", link, visible })
       </Text>
       <Image
         srcSet={[image, image]}
-        placeholder={sliceSlidesPlaceholder}
+        placeholder={image}
         alt="The new My Slides tab in slice, showing annotated and favorited slides."
         sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
       />
