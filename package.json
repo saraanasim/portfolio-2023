@@ -51,7 +51,7 @@
     "dev": "next dev",
     "build": "next build && next export -o build/",
     "build:storybook": "build-storybook -o build-storybook && node scripts/draco-storybook",
-    "deploy" : "rimraf node_modules/.cache && rimraf out && next build && next export && echo. > out/.nojekyll && gh-pages -d out -t true ",
+    "deploy": "rimraf node_modules/.cache && rimraf out && next build && next export && echo. > out/.nojekyll && gh-pages -d out -t true ",
     "deploy:storybook": "aws s3 sync --delete build-storybook s3://hamish-portfolio-storybook",
     "deploy:functions": "cd functions && npm run deploy",
     "start": "next start",
@@ -75,4 +75,5 @@
     "npm": ">=8.6.0",
     "node": ">=18.0.0"
   }
+ 
 }

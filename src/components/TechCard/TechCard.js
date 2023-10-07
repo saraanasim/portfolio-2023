@@ -1,4 +1,3 @@
-import sliceSlidesPlaceholder from 'assets/slice-slides-placeholder.jpg';
 import { Image } from 'components/Image';
 import { useState } from "react";
 import { media } from "utils/style";

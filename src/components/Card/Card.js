@@ -1,4 +1,3 @@
-import sliceSlidesPlaceholder from 'assets/slice-slides-placeholder.jpg';
 import { Button } from 'components/Button';
 import { Heading } from 'components/Heading';
 import { Image } from 'components/Image';
