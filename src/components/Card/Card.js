@@ -27,12 +27,16 @@ const Card = ({ name, description, image, buttonText = "Visit", link, visible })
       <Text className={styles.description} data-visible={visible} as="p">
         {description}
       </Text>
-      <Image
-        srcSet={[image, image]}
-        placeholder={image}
-        alt="The new My Slides tab in slice, showing annotated and favorited slides."
-        sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
-      />
+      <div className={styles.image}>
+
+        <Image
+
+          srcSet={[image, image]}
+          placeholder={image}
+          alt="The new My Slides tab in slice, showing annotated and favorited slides."
+          sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
+        />
+      </div>
 
     </div>
   );

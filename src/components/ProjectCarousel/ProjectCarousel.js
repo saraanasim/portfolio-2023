@@ -7,14 +7,15 @@ import { Section } from 'components/Section';
 import { Transition } from 'components/Transition';
 import { useState } from 'react';
 import styles from './ProjectCarousel.module.css';
+
 const ProjectCarousel = ({ sectionRef, visible, id }) => {
     const titleId = `${id}-title`;
     const [focused, setFocused] = useState(false);
     const otherProjects = [
         { name: "Consortium X", description: "UK based Company Website", image: consortiumImage, link: "https://consortiumx.co.uk/" },
-        { name: "David Secul", description: "Portfolio Website", image: davidseculImage, link: "https://consortiumx.co.uk/" },
-        { name: "Sachin Jha", description: "Blog Website", image: sachcodeImage, link: "https://consortiumx.co.uk/" },
-        { name: "Xsisec", description: "Portfolio Website", image: xsisecImage, link: "https://consortiumx.co.uk/" }
+        { name: "David Secul", description: "Portfolio Website", image: davidseculImage, link: "https://davidsecul.com/" },
+        { name: "Sachin Jha", description: "Blog Website", image: sachcodeImage, link: "https://sachcode.com/" },
+        { name: "Xsisec", description: "Portfolio Website", image: xsisecImage, link: "https://xsisec.com/" }
     ];
     return (
 
