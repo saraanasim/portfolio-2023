@@ -29,7 +29,7 @@ const styles = {
         alignItems: "center",
         transition: "all 250ms linear",
         maxWidth: "100px",
-        height: "fit-content"
+        height: "fit-content",
     },
     cardHoverStyle: {
         display: "flex",

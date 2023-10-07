@@ -9,8 +9,9 @@ import javascriptLogo from 'assets/javascript.png';
 import awsLogo from 'assets/aws.png';
 import dockerLogo from 'assets/docker.png';
 import typescriptLogo from 'assets/typescript.png';
-import nextLogo from 'assets/next.png';
+import nextLogo from 'assets/next.webp';
 import gatsbyLogo from 'assets/gatsby.png';
+import nestLogo from 'assets/nest.png';
 
 import { Section } from 'components/Section';
 import styles from './TechStack.module.css';
@@ -39,6 +40,15 @@ const TechStack = ({ sectionRef, visible, id }) => {
         }
         ,
         {
+            text: "Nest js",
+            image: nestLogo
+        },
+        {
+            text: "Next js",
+            image: nextLogo
+        }
+        ,
+        {
             text: "AWS",
             image: awsLogo
         },
@@ -46,10 +56,7 @@ const TechStack = ({ sectionRef, visible, id }) => {
             text: "Docker",
             image: dockerLogo
         },
-        {
-            text: "Next js",
-            image: nextLogo
-        },
+
         {
             text: "Gatsby js",
             image: gatsbyLogo
