@@ -3,11 +3,11 @@ import { Icon } from 'components/Icon';
 import { useTheme } from 'components/ThemeProvider';
 import { useReducedMotion } from 'framer-motion';
 import { useHasMounted, useInViewport } from 'hooks';
+import Image from 'next/image';
 import { Fragment, forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet, srcSetToString } from 'utils/image';
 import { classes, cssProps, numToMs } from 'utils/style';
 import styles from './Image.module.css';
-import Image from 'next/image';
 
 export const ImageComponent = ({
   className,
@@ -187,7 +187,7 @@ const ImageElements = forwardRef(({
         />
       )}
       {showPlaceholder && (
-        <Image
+        <img
           aria-hidden
           className={styles.placeholder}
           data-loaded={loaded}

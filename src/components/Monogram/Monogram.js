@@ -1,11 +1,14 @@
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 import { classes } from 'utils/style';
 import styles from './Monogram.module.css';
 
 export const Monogram = forwardRef(({ className, ...props }, ref) => {
+  const id = useId();
+  const clipId = `${id}monogram-clip`;
 
   return (
     <svg
+      id={clipId}
       aria-hidden
       className={classes(styles.monogram, className)}
       width="80"

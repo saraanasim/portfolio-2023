@@ -9,11 +9,11 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
 
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/icon-256.png" />
-        <link type="text/plain" rel="author" href="/humans.txt" />
+        <link rel="manifest" href="/portfolio-2023/manifest.json" />
+        <link rel="shortcut icon" href="/portfolio-2023/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/portfolio-2023/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/portfolio-2023/icon-256.png" />
+        <link type="text/plain" rel="author" href="/portfolio-2023/humans.txt" />
 
         <link rel="preload" href={GothamMedium} as="font" crossOrigin="true" />
         <link rel="preload" href={GothamBook} as="font" crossOrigin="true" />
