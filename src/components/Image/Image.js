@@ -203,7 +203,7 @@ const ImageElements = forwardRef(({
       )}
     </div>
   );
-})
+});
 
 function getIsVideo(src) {
   return typeof src.src === 'string' && src.src.endsWith('.mp4');
