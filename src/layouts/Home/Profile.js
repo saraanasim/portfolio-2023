@@ -1,10 +1,10 @@
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
-import { default as profileImg, default as profileImgLarge } from 'assets/profile.jpg';
+import profileImg from 'assets/profile.jpg';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
-import { Image } from 'components/Image';
+import { ImageComponent } from 'components/Image';
 import { Link } from 'components/Link';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
@@ -77,13 +77,13 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 </div>
               </div>
               <div className={styles.image}>
-                <Image
+                <ImageComponent
                   reveal
                   delay={100}
-                  placeholder={profileImgPlaceholder}
-                  srcSet={[profileImg, profileImgLarge]}
+                  placeholder={profileImg}
+                  src={profileImg}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
+                  alt="Saraan sitting on Kalam Bridge, posing for the camera, casually"
                 />
 
               </div>

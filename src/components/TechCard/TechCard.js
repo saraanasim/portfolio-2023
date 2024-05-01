@@ -1,4 +1,5 @@
-import { Image } from 'components/Image';
+import { ImageComponent } from 'components/Image';
+import Image from 'next/image';
 import { useState } from "react";
 import { media } from "utils/style";
 
@@ -12,10 +13,8 @@ export const TechCard = ({ image, text }) => {
             onMouseLeave={() => setHovering(false)}
         >
             <Image
-                srcSet={[image, image]}
-                placeholder={image}
-                alt="The new My Slides tab in slice, showing annotated and favorited slides."
-                sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
+                src={image}
+                alt={text}
             />
             <p style={styles.textStyle}>{text}</p>
         </div>

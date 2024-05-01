@@ -1,8 +1,7 @@
 import { Button } from 'components/Button';
 import { Heading } from 'components/Heading';
-import { Image } from 'components/Image';
 import { Text } from 'components/Text';
-import { media } from 'utils/style';
+import Image from 'next/image';
 import styles from './Card.module.css';
 const Card = ({ name, description, image, buttonText = "Visit", link, visible }) => {
   return (
@@ -30,11 +29,9 @@ const Card = ({ name, description, image, buttonText = "Visit", link, visible })
       <div className={styles.image}>
 
         <Image
-
-          srcSet={[image, image]}
-          placeholder={image}
-          alt="The new My Slides tab in slice, showing annotated and favorited slides."
-          sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
+          loading='lazy'
+          src={image}
+          alt={description}
         />
       </div>
 

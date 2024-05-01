@@ -7,6 +7,7 @@ import { classes, cssProps } from 'utils/style';
 import styles from './Loader.module.css';
 
 export const Loader = ({ className, style, size = 32, text = 'Loading...', ...rest }) => {
+  console.log({ className, style, size, text })
   const reduceMotion = useReducedMotion();
   const hasMounted = useHasMounted();
 
@@ -14,7 +15,7 @@ export const Loader = ({ className, style, size = 32, text = 'Loading...', ...re
     if (!hasMounted) return;
 
     return createPortal(
-      <VisuallyHidden className="loader-announcement" aria-live="assertive">
+      <VisuallyHidden className="loader-announcement" aria-live="assertive" visible>
         {text}
       </VisuallyHidden>,
       document.getElementById('portal-root')

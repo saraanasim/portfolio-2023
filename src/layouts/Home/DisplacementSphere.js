@@ -151,12 +151,6 @@ export const DisplacementSphere = props => {
       window.addEventListener('mousemove', onMouseMove);
     }
 
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-    };
-  }, [isInViewport, reduceMotion, rotationX, rotationY]);
-
-  useEffect(() => {
     let animation;
 
     const animate = () => {
@@ -180,7 +174,9 @@ export const DisplacementSphere = props => {
     }
 
     return () => {
+      window.removeEventListener('mousemove', onMouseMove);
       cancelAnimationFrame(animation);
+
     };
   }, [isInViewport, reduceMotion, rotationX, rotationY]);
 

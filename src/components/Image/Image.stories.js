@@ -1,4 +1,4 @@
-import { Image } from 'components/Image';
+import { ImageComponent } from 'components/Image';
 import { StoryContainer } from '../../../.storybook/StoryContainer';
 
 export default {
@@ -22,7 +22,7 @@ const imageData = {
 const Story = args => (
   <StoryContainer>
     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0px, 960px)' }}>
-      <Image alt="An abstract purple and pink neon thing" {...imageData} {...args} />
+      <ImageComponent alt="An abstract purple and pink neon thing" {...imageData} {...args} />
     </div>
   </StoryContainer>
 );

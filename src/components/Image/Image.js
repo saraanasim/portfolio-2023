@@ -3,12 +3,13 @@ import { Icon } from 'components/Icon';
 import { useTheme } from 'components/ThemeProvider';
 import { useReducedMotion } from 'framer-motion';
 import { useHasMounted, useInViewport } from 'hooks';
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
+import { Fragment, forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet, srcSetToString } from 'utils/image';
 import { classes, cssProps, numToMs } from 'utils/style';
 import styles from './Image.module.css';
+import Image from 'next/image';
 
-export const Image = ({
+export const ImageComponent = ({
   className,
   style,
   reveal,
@@ -40,6 +41,7 @@ export const Image = ({
       ref={containerRef}
     >
       <ImageElements
+        ref={containerRef}
         delay={delay}
         onLoad={onLoad}
         loaded={loaded}
@@ -54,7 +56,7 @@ export const Image = ({
   );
 };
 
-const ImageElements = ({
+const ImageElements = forwardRef(({
   onLoad,
   loaded,
   inViewport,
@@ -69,13 +71,12 @@ const ImageElements = ({
   sizes,
   noPauseButton,
   ...rest
-}) => {
+}, ref) => {
   const reduceMotion = useReducedMotion();
   const [showPlaceholder, setShowPlaceholder] = useState(true);
   const [playing, setPlaying] = useState(!reduceMotion);
   const [videoSrc, setVideoSrc] = useState();
   const [videoInteracted, setVideoInteracted] = useState(false);
-  const placeholderRef = useRef();
   const videoRef = useRef();
   const isVideo = getIsVideo(src);
   const showFullRes = inViewport;
@@ -140,7 +141,7 @@ const ImageElements = ({
   };
 
   return (
-    <div
+    <div ref={ref}
       className={styles.elementWrapper}
       data-reveal={reveal}
       data-visible={inViewport || loaded}
@@ -171,13 +172,13 @@ const ImageElements = ({
         </Fragment>
       )}
       {!isVideo && (
-        <img
+        <Image
           className={styles.element}
           data-loaded={loaded}
           onLoad={onLoad}
           decoding="async"
-          src={showFullRes ? src.src : undefined}
-          srcSet={showFullRes ? srcSetString : undefined}
+          src={showFullRes ? src.src : src.src}
+          srcSet={showFullRes ? srcSetString : src.src}
           width={src.width}
           height={src.height}
           alt={alt}
@@ -186,12 +187,11 @@ const ImageElements = ({
         />
       )}
       {showPlaceholder && (
-        <img
+        <Image
           aria-hidden
           className={styles.placeholder}
           data-loaded={loaded}
           style={cssProps({ delay: numToMs(delay) })}
-          ref={placeholderRef}
           src={placeholder.src}
           width={placeholder.width}
           height={placeholder.height}
@@ -203,7 +203,7 @@ const ImageElements = ({
       )}
     </div>
   );
-};
+})
 
 function getIsVideo(src) {
   return typeof src.src === 'string' && src.src.endsWith('.mp4');

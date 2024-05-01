@@ -91,9 +91,9 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
+        title="Full Stack Developer"
         description="Design portfolio of Saraan Asim — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+          apps with a focus on motion, experience design, and accessibility having expertise in MERN Stack, Next and Nest js"
       />
       <Intro
         id="intro"

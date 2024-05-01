@@ -20,6 +20,7 @@ import { cleanRenderer, cleanScene, textureLoader } from 'utils/three';
 import styles from './Carousel.module.css';
 import fragment from './carouselFragment.glsl';
 import vertex from './carouselVertex.glsl';
+import Image from 'next/image';
 
 function determineIndex(imageIndex, index, images, direction) {
   if (index !== null) return index;
@@ -53,9 +54,8 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
   const placeholderRef = useRef();
   const initSwipeX = useRef();
 
-  const currentImageAlt = `Slide ${imageIndex + 1} of ${images.length}. ${
-    images[imageIndex].alt
-  }`;
+  const currentImageAlt = `Slide ${imageIndex + 1} of ${images.length}. ${images[imageIndex].alt
+    }`;
 
   useEffect(() => {
     if (dragging) {
@@ -369,7 +369,7 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
             <canvas aria-hidden className={styles.canvas} ref={canvas} />
           </div>
           {showPlaceholder && placeholder && (
-            <img
+            <Image
               aria-hidden
               className={styles.placeholder}
               data-loaded={loaded && !!textures}

@@ -1,6 +1,6 @@
 import { Button } from 'components/Button';
 import { Heading } from 'components/Heading';
-import { Image } from 'components/Image';
+import { ImageComponent } from 'components/Image';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
@@ -119,7 +119,7 @@ export const ProjectBackground = ({ opacity = 0.7, className, ...rest }) => {
           data-visible={visible}
         >
           <div className={styles.backgroundImageElement} ref={imageRef}>
-            <Image alt="" role="presentation" {...rest} />
+            <ImageComponent alt="" role="presentation" {...rest} />
           </div>
           <div className={styles.backgroundScrim} style={cssProps({ opacity })} />
         </div>
@@ -130,7 +130,7 @@ export const ProjectBackground = ({ opacity = 0.7, className, ...rest }) => {
 
 export const ProjectImage = ({ className, alt, ...rest }) => (
   <div className={classes(styles.image, className)}>
-    <Image reveal alt={alt} delay={300} {...rest} />
+    <ImageComponent reveal alt={alt} delay={300} {...rest} />
   </div>
 );
 
