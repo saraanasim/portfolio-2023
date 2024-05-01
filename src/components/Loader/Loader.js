@@ -7,7 +7,6 @@ import { classes, cssProps } from 'utils/style';
 import styles from './Loader.module.css';
 
 export const Loader = ({ className, style, size = 32, text = 'Loading...', ...rest }) => {
-  console.log({ className, style, size, text })
   const reduceMotion = useReducedMotion();
   const hasMounted = useHasMounted();
 
