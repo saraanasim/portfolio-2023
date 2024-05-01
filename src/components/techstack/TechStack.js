@@ -1,21 +1,21 @@
-import { TechCard } from 'components/TechCard/TechCard';
-import React, { useState } from 'react';
-import reactLogo from 'assets/react.png';
-import nodeLogo from 'assets/node.png';
-import mongoLogo from 'assets/mongo.png';
-import expressLogo from 'assets/express.png';
-import sqlLogo from 'assets/mysql.png';
-import javascriptLogo from 'assets/javascript.png';
 import awsLogo from 'assets/aws.png';
 import dockerLogo from 'assets/docker.png';
-import typescriptLogo from 'assets/typescript.png';
-import nextLogo from 'assets/next.webp';
+import expressLogo from 'assets/express.png';
 import gatsbyLogo from 'assets/gatsby.png';
+import javascriptLogo from 'assets/javascript.png';
+import mongoLogo from 'assets/mongo.png';
+import sqlLogo from 'assets/mysql.png';
 import nestLogo from 'assets/nest.png';
+import nextLogo from 'assets/next.webp';
+import nodeLogo from 'assets/node.png';
+import reactLogo from 'assets/react.png';
+import typescriptLogo from 'assets/typescript.png';
+import { TechCard } from 'components/TechCard/TechCard';
+import { useState } from 'react';
 
 import { Section } from 'components/Section';
-import styles from './TechStack.module.css';
 import { Transition } from 'components/Transition';
+import styles from './TechStack.module.css';
 
 const TechStack = ({ sectionRef, visible, id }) => {
     const titleId = `${id}-title`;

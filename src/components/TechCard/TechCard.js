@@ -1,11 +1,8 @@
-import { ImageComponent } from 'components/Image';
 import Image from 'next/image';
 import { useState } from "react";
-import { media } from "utils/style";
 
 export const TechCard = ({ image, text }) => {
     const [hovering, setHovering] = useState(false);
-    const [hover, setHover] = useState(false);
     return (
         <div
             style={hovering ? styles.cardHoverStyle : styles.cardStyle}
